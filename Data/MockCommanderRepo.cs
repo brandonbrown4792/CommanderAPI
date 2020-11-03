@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Commander.Models;
 
 namespace Commander.Data
@@ -19,7 +20,8 @@ namespace Commander.Data
 
         public Command GetCommandById(int id)
         {
-            return new Command{Id=0, HowTo="Boil an egg", Line="Boil water", Platform="Kettle & pan"};
+            
+            return GetAppCommands().First(command => command.Id == 0);
         }
     }
 }
