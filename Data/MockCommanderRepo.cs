@@ -20,8 +20,7 @@ namespace Commander.Data
 
         public Command GetCommandById(int id)
         {
-            
-            return GetAppCommands().First(command => command.Id == 0);
+            return GetAppCommands().First();
         }
     }
 }
