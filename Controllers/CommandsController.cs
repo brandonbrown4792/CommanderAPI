@@ -21,7 +21,7 @@ namespace Commander.Controllers
         [HttpGet]
         public ActionResult <IEnumerable<Command>> GetAllCommands()
         {
-            IEnumerable<Command> commandItems = _respository.GetAppCommands();
+            IEnumerable<Command> commandItems = _respository.GetAllCommands();
 
             return Ok(commandItems);
         }
